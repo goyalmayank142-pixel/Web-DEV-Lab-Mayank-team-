@@ -6,12 +6,12 @@ A collaborative student profile repository built using Git and GitHub as part of
 
 ## 👥 Team Roles and Responsibilities
 
-| Student | Responsibility | Branch | File Contributed | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **Mayank Goyal (Student 1)** | Team Lead & Reviewer | `main` | `README.md` | **Merged** |
-| **Student 2** | Profile Developer | `feature/profile` | `profile.html` | **Merged (PR #1)** |
-| **Student 3** | Skills Developer | `feature/skills` | `skills.html` | **Merged (PR #2)** |
-| **Student 4** | Contact Developer | `feature/contact` | `contact.html` | **Merged (PR #3)** |
+| Student | GitHub Username | Responsibility | Branch | File Contributed | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Mayank Goyal** | [`@goyalmayank142-pixel`](https://github.com/goyalmayank142-pixel) | Team Lead & Reviewer | `main` | `README.md` | **Merged** |
+| **Cherish Goyal** | [`@cherishgoyal754-eng`](https://github.com/cherishgoyal754-eng) | Profile Developer | `feature/profile` | `profile.html` | **Merged (PR #1)** |
+| **Viraj Bashishtha** | [`@virajbashishtha`](https://github.com/virajbashishtha) | Skills Developer | `feature/skills` | `skills.html` | **Merged (PR #2)** |
+| **Student 4** | Contributor | Contact Developer | `feature/contact` | `contact.html` | **Merged (PR #3)** |
 
 ---
 
