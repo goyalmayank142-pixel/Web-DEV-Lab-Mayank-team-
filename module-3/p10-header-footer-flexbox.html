@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P10: Portfolio Header & Footer (Advanced Flexbox)</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; margin: 0; display: flex; flex-direction: column; min-height: 100vh; background: #fafafa; }
+    
+    /* Advanced Flexbox Header */
+    header {
+      background: #18181b;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .brand-group { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-links { display: flex; list-style: none; margin: 0; padding: 0; gap: 1.5rem; }
+    .nav-links a { color: #a1a1aa; text-decoration: none; font-size: 0.95rem; }
+    .nav-links a:hover { color: white; }
+    .cta-group { display: flex; gap: 0.75rem; }
+    .btn { padding: 0.5rem 1rem; border-radius: 6px; font-weight: 500; text-decoration: none; font-size: 0.875rem; }
+    .btn-outline { border: 1px solid #3f3f46; color: white; }
+    .btn-primary { background: #3b82f6; color: white; }
+
+    main { flex: 1; padding: 3rem 2rem; max-width: 900px; margin: 0 auto; width: 100%; }
+    
+    /* Advanced Flexbox Footer */
+    footer {
+      background: #09090b;
+      color: #71717a;
+      padding: 2.5rem 2rem;
+      border-top: 1px solid #27272a;
+    }
+    .footer-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .footer-col { flex: 1; min-width: 200px; }
+    .footer-col h4 { color: white; margin-top: 0; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; line-height: 2; }
+    .footer-col a { color: #a1a1aa; text-decoration: none; font-size: 0.9rem; }
+    .footer-col a:hover { color: #3b82f6; }
+    .footer-bottom {
+      max-width: 1000px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid #27272a;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand-group">
+      <div style="width:24px;height:24px;background:#3b82f6;border-radius:4px;"></div>
+      <strong>Mayank.Portfolio</strong>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Overview</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Case Studies</a></li>
+      <li><a href="#">Experience</a></li>
+    </ul>
+    <div class="cta-group">
+      <a href="#" class="btn btn-outline">Resume</a>
+      <a href="#" class="btn btn-primary">Hire Me</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>Advanced Flexbox Header & Footer Layout</h2>
+    <p>Using <code>display: flex; flex-direction: column; min-height: 100vh;</code> on the body with <code>flex: 1</code> on the main content guarantees sticky-footer behavior regardless of viewport height.</p>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>About Me</h4>
+        <p style="font-size: 0.9rem;">Full-stack software developer crafting high-performance, responsive web interfaces.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Socials</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Mayank. All rights reserved.</span>
+      <span>Designed with CSS Flexbox</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P6: Full Portfolio Page Structure</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.6; margin: 0; background: #0f172a; color: #f8fafc; }
+    nav { background: #1e293b; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+    nav a { color: #38bdf8; text-decoration: none; font-weight: 500; }
+    .hero { padding: 4rem 2rem; text-align: center; background: #1e293b; border-bottom: 1px solid #334155; }
+    .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    section { background: #1e293b; padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid #334155; }
+    .project-card { background: #0f172a; padding: 1rem; border-radius: 6px; margin-top: 1rem; }
+    footer { text-align: center; padding: 2rem; color: #94a3b8; border-top: 1px solid #334155; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <strong>Mayank.dev</strong>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Hi, I'm Mayank</h1>
+      <p>Building clean, accessible, and fast web experiences.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Focused on writing maintainable semantic HTML and scalable CSS layouts with modern web standards.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Proficiencies</h2>
+      <ul>
+        <li>HTML5 Semantic Architecture</li>
+        <li>Modern CSS (Flexbox, Grid, Custom Properties)</li>
+        <li>Version Control & Git Collaboration</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <article class="project-card">
+        <h3>Team Profile Collaboration Hub</h3>
+        <p>A multi-developer collaborative portal demonstrating Git branching, PR workflows, and HTML semantic tags.</p>
+      </article>
+      <article class="project-card">
+        <h3>Interactive Dashboard</h3>
+        <p>Responsive layout powered by CSS Grid and Flexbox for real-time analytics.</p>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p>Connect on GitHub: <a href="https://github.com/goyalmayank142-pixel" style="color: #38bdf8;">@goyalmayank142-pixel</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mayank. All rights reserved.</p>
+  </footer>
+</body>
+</html>

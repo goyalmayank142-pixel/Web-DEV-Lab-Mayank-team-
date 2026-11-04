@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P8: Sticky Navbar & Card Overlay</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; background: #f1f5f9; color: #1e293b; }
+    /* Sticky Navigation */
+    nav.sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .content { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    
+    /* Card with Absolute Overlay */
+    .card-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 350px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin-bottom: 2rem;
+    }
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 20%, rgba(15, 23, 42, 0.4) 70%, transparent);
+      color: white;
+      padding: 2rem 1.5rem 1.5rem;
+    }
+    .card-overlay h2 { margin: 0 0 0.5rem; }
+    .card-overlay p { margin: 0; font-size: 0.95rem; color: #cbd5e1; }
+    .scroll-filler { height: 700px; background: white; padding: 1.5rem; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <nav class="sticky-nav">
+    <strong>Sticky Header</strong>
+    <span>Stays locked to top while scrolling</span>
+  </nav>
+
+  <div class="content">
+    <h1>CSS Positioning Demo</h1>
+    <div class="card-container">
+      <img class="card-image" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&auto=format&fit=crop&q=80" alt="Laptop">
+      <div class="card-overlay">
+        <h2>Web Development Lab</h2>
+        <p>This overlay uses <code>position: absolute</code> inside a <code>position: relative</code> parent card container with gradient transparency.</p>
+      </div>
+    </div>
+
+    <div class="scroll-filler">
+      <h3>Scroll down to test sticky navigation</h3>
+      <p>The navbar at the top utilizes <code>position: sticky; top: 0;</code> to stay visible during scrolling while respecting normal document flow.</p>
+    </div>
+  </div>
+</body>
+</html>

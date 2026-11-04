@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P13: Flexbox vs. CSS Grid Decision Guide</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.6; margin: 0; padding: 2rem; background: #f8fafc; color: #1e293b; }
+    .container { max-width: 960px; margin: 0 auto; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    h1 { color: #0f172a; margin-top: 0; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+    .comparison-table th, .comparison-table td { border: 1px solid #e2e8f0; padding: 1rem; text-align: left; }
+    .comparison-table th { background: #f1f5f9; font-weight: 600; }
+    .badge { display: inline-block; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 600; font-size: 0.8rem; }
+    .badge-flex { background: #dbeafe; color: #1e40af; }
+    .badge-grid { background: #fef3c7; color: #92400e; }
+    .use-case { background: #f8fafc; border-left: 4px solid #2563eb; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>P13: Choosing Between Flexbox and Grid for a Shared Layout</h1>
+    <p>A comprehensive architectural guideline on when to employ Flexbox versus CSS Grid when designing complex responsive applications.</p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th><span class="badge badge-flex">CSS Flexbox</span></th>
+          <th><span class="badge badge-grid">CSS Grid</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Dimensionality</strong></td>
+          <td><strong>1-Dimensional</strong> (row OR column at a time)</td>
+          <td><strong>2-Dimensional</strong> (rows AND columns simultaneously)</td>
+        </tr>
+        <tr>
+          <td><strong>Design Approach</strong></td>
+          <td><strong>Content-First</strong> (content size determines layout flow)</td>
+          <td><strong>Layout-First</strong> (track grid structure defines element position)</td>
+        </tr>
+        <tr>
+          <td><strong>Item Alignment</strong></td>
+          <td>Ideal for distributing space between inline components</td>
+          <td>Strict coordinate alignment across intersecting tracks</td>
+        </tr>
+        <tr>
+          <td><strong>Overlapping Content</strong></td>
+          <td>Requires manual <code>position: absolute</code></td>
+          <td>Native via overlapping grid areas or row/column spans</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>When to Choose Which System?</h2>
+
+    <div class="use-case">
+      <h3>Pick Flexbox When:</h3>
+      <ul>
+        <li>Building headers, navigation menus, and breadcrumbs with variable text lengths.</li>
+        <li>Distributing action buttons, tags, or pills that wrap organically.</li>
+        <li>Vertical centering of content inside a single card or modal container.</li>
+      </ul>
+    </div>
+
+    <div class="use-case">
+      <h3>Pick CSS Grid When:</h3>
+      <ul>
+        <li>Constructing macro layouts: page frames, header/sidebar/main/footer templates.</li>
+        <li>Displaying responsive product catalogs, galleries, or dashboards with uniform cards.</li>
+        <li>Newspaper/magazine editorial layouts with multi-column spanning and complex alignment.</li>
+      </ul>
+    </div>
+
+    <div class="use-case" style="border-left-color: #10b981;">
+      <h3>Best Practice: Combine Both!</h3>
+      <p>Modern layouts use <strong>CSS Grid for macro layout</strong> (overall page architecture and multi-column feeds) and <strong>Flexbox for micro layout</strong> (aligning icons, badges, button bars, and header links inside individual grid components).</p>
+    </div>
+  </div>
+</body>
+</html>

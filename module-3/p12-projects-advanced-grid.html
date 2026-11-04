@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P12: Advanced Portfolio Projects Grid</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 2.5rem 1.5rem; background: #0f172a; color: #f8fafc; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+    p.subtitle { color: #94a3b8; margin-bottom: 2rem; }
+
+    /* Advanced CSS Grid with minmax & auto-fit */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+      border-color: #64748b;
+    }
+    .featured {
+      grid-column: span 2;
+    }
+    @media (max-width: 768px) {
+      .featured { grid-column: span 1; }
+    }
+
+    .card-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      background: #334155;
+    }
+    .card-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-title { font-size: 1.25rem; margin: 0 0 0.5rem; color: #38bdf8; }
+    .card-desc { color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1rem; }
+    .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .tag { font-size: 0.75rem; background: #334155; color: #e2e8f0; padding: 0.25rem 0.6rem; border-radius: 9999px; }
+    .card-link { color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Featured Engineering Projects</h1>
+    <p class="subtitle">Dynamic grid utilizing <code>repeat(auto-fit, minmax(320px, 1fr))</code> with featured span highlighting.</p>
+
+    <div class="projects-grid">
+      <!-- Featured Project Card spanning 2 columns -->
+      <article class="project-card featured">
+        <img class="card-img" style="height:260px;" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&auto=format&fit=crop&q=80" alt="Code">
+        <div class="card-body">
+          <div>
+            <div class="tags">
+              <span class="tag">Flagship</span>
+              <span class="tag">Full-Stack</span>
+              <span class="tag">CSS Grid</span>
+            </div>
+            <h2 class="card-title">Distributed Task Workflow Engine</h2>
+            <p class="card-desc">An enterprise-grade autonomous pipeline manager built with microservices and resilient message brokers. Utilizes 2D Grid layouts for node orchestration graphs.</p>
+          </div>
+          <a href="#" class="card-link">View Architecture Case Study &rarr;</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80" alt="Data Analytics">
+        <div class="card-body">
+          <div>
+            <div class="tags"><span class="tag">Analytics</span><span class="tag">HTML5</span></div>
+            <h2 class="card-title">Telemetry Metrics Portal</h2>
+            <p class="card-desc">Real-time latency metrics dashboard visualizing cluster load and cache hit ratios.</p>
+          </div>
+          <a href="#" class="card-link">Explore Dashboard &rarr;</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80" alt="Finance">
+        <div class="card-body">
+          <div>
+            <div class="tags"><span class="tag">FinTech</span><span class="tag">Responsive</span></div>
+            <h2 class="card-title">Crypto Asset Screener</h2>
+            <p class="card-desc">Fast search interface with websocket price feeds and automated volume anomaly alerts.</p>
+          </div>
+          <a href="#" class="card-link">Live Demo &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

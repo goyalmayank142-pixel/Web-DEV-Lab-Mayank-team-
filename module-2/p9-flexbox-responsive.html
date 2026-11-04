@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P9: Responsive Flexbox Navbar & Card Grid</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; margin: 0; background: #f8fafc; color: #1e293b; }
+    
+    /* Responsive Flexbox Navbar */
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #1e293b;
+      color: white;
+    }
+    .brand { font-size: 1.25rem; font-weight: bold; }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a { color: #94a3b8; text-decoration: none; font-weight: 500; }
+    .nav-links a:hover { color: white; }
+
+    /* Flexbox Card Grid */
+    .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .card {
+      flex: 1 1 calc(33.333% - 1.5rem);
+      min-width: 260px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card h3 { margin-top: 0; color: #0f172a; }
+    .card p { color: #64748b; line-height: 1.5; }
+    .card-action {
+      margin-top: 1rem;
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .navbar { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .nav-links { flex-direction: column; gap: 0.75rem; width: 100%; }
+      .card { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">FlexDev.co</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <h2>Responsive Flexbox Card Grid</h2>
+    <div class="card-grid">
+      <article class="card">
+        <div>
+          <h3>Feature One</h3>
+          <p>Cards automatically adapt their width using <code>flex: 1 1 calc(33.333% - 1.5rem)</code> and wrap seamlessly.</p>
+        </div>
+        <a href="#" class="card-action">Learn more &rarr;</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <h3>Feature Two</h3>
+          <p>On mobile devices, media queries collapse the layout to full-width cards with vertical navigation.</p>
+        </div>
+        <a href="#" class="card-action">Learn more &rarr;</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <h3>Feature Three</h3>
+          <p>Vertical alignment within cards uses column flex direction to anchor action links to the bottom.</p>
+        </div>
+        <a href="#" class="card-action">Learn more &rarr;</a>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
